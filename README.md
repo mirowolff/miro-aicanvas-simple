@@ -1,8 +1,6 @@
-# Miro Canvas Clone
+# Miro AI Canvas Simple
 
-A high-performance, interactive canvas interface inspired by Miro, built with Next.js 15, React 19, and Tailwind CSS 4. This project implements a feature-rich canvas with pan/zoom controls, grid rendering, and a polished UI using the Miro Design System.
-
-https://github.com/user-attachments/assets/eaa4a55c-4b50-4f60-8e3e-1b62ab0f7ac3
+A high-performance, interactive canvas interface inspired by Miro, built with React 19, Vite, and Tailwind CSS 4. This project implements a feature-rich canvas with pan/zoom controls, grid rendering, and a polished UI using the Miro Design System.
 
 ## Features
 
@@ -27,10 +25,10 @@ https://github.com/user-attachments/assets/eaa4a55c-4b50-4f60-8e3e-1b62ab0f7ac3
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 with App Router and Turbopack
-- **Runtime**: React 19 with latest features
+- **Build Tool**: Vite 5
+- **Framework**: React 19 with latest features
 - **Styling**: Tailwind CSS 4
-- **Icons**: @mirohq/design-system-icons
+- **Design System**: @mirohq/design-system with icons
 - **Package Manager**: Bun
 - **TypeScript**: Full type safety
 
@@ -44,8 +42,8 @@ https://github.com/user-attachments/assets/eaa4a55c-4b50-4f60-8e3e-1b62ab0f7ac3
 
 ```bash
 # Clone the repository
-git clone https://github.com/mirowolff/miro-ai-canvas-simple.git
-cd miro-ai-canvas-simple
+git clone git@github.com:mirowolff/miro-aicanvas-simple.git
+cd miro-aicanvas-simple
 
 # Install dependencies
 bun install
@@ -54,28 +52,33 @@ bun install
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see the canvas in action.
+Open [http://localhost:5173](http://localhost:5173) to see the canvas in action.
 
 ## Project Structure
 
 ```
-├── app/                    # Next.js app directory
-│   ├── layout.tsx         # Root layout with fonts and metadata
-│   ├── page.tsx           # Main canvas page
-│   └── globals.css        # Global styles and design tokens
-├── components/
-│   ├── layout/            # Layout components
-│   │   ├── Canvas.tsx     # Main canvas with rendering logic
-│   │   ├── BoardBar.tsx   # Top navigation bar
-│   │   ├── CollaborationBar.tsx
-│   │   ├── Toolbar.tsx
-│   │   └── ZoomPanel.tsx
-│   └── ui/                # Reusable UI components
-│       ├── Avatar.tsx
-│       ├── Button.tsx
-│       └── MeAvatarWithCounter.tsx
-└── styles/
-    └── miro-tokens.css    # Miro Design System tokens
+├── src/
+│   ├── main.tsx           # Application entry point
+│   ├── App.tsx            # Root component
+│   ├── index.css          # Global styles
+│   ├── components/
+│   │   ├── layout/        # Layout components
+│   │   │   ├── Canvas.tsx # Main canvas with rendering logic
+│   │   │   ├── BoardBar.tsx
+│   │   │   ├── CollaborationBar.tsx
+│   │   │   ├── Toolbar.tsx
+│   │   │   └── ZoomPanel.tsx
+│   │   ├── ui/            # Reusable UI components
+│   │   │   ├── Avatar.tsx
+│   │   │   └── MeAvatarWithCounter.tsx
+│   │   └── canvas/        # Canvas-specific components
+│   │       ├── StickyNote.tsx
+│   │       └── StickyColorPicker.tsx
+│   └── styles/
+│       └── miro-tokens.css # Miro Design System tokens
+├── index.html             # HTML entry point
+├── vite.config.ts         # Vite configuration
+└── tailwind.config.js     # Tailwind CSS configuration
 ```
 
 ## Performance Optimizations
@@ -135,5 +138,5 @@ MIT
 ## Acknowledgments
 
 - Design system and icons from [Miro](https://miro.com)
-- Built with [Next.js](https://nextjs.org)
+- Built with [Vite](https://vitejs.dev) and [React](https://react.dev)
 - Styled with [Tailwind CSS](https://tailwindcss.com)
