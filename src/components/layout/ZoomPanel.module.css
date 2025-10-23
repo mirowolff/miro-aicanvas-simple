@@ -1,0 +1,92 @@
+.zoom-panel-container {
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  z-index: 9999;
+}
+
+.zoom-panel {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-neutrals);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--colors-alpha-black200);
+  border: 1px solid var(--border-neutrals);
+  overflow: hidden;
+  font-size: 14px;
+  padding: 4px;
+  transition: width 0.2s ease-in-out;
+}
+
+.zoom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.zoom-button:hover {
+  background-color: var(--background-neutrals-hover);
+}
+
+.zoom-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.zoom-button:disabled:hover {
+  background-color: transparent;
+}
+
+.icon-container {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoom-controls {
+  display: flex;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.2s ease-in-out;
+}
+
+.zoom-panel:hover .zoom-controls {
+  width: 48px;
+}
+
+.list-button {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.2s ease-in-out;
+}
+
+.zoom-panel:hover .list-button {
+  width: 24px;
+}
+
+.zoom-dropdown-container {
+  position: relative;
+}
+
+.zoom-dropdown {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 6px 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-neutrals);
+  cursor: pointer;
+  min-width: 60px;
+  text-align: center;
+  outline: none;
+}
